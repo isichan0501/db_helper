@@ -59,7 +59,7 @@ from loguru import logger
 from dotenv import load_dotenv
 # 環境変数を参照
 load_dotenv()
-SHEET_JSON_FILE = os.getenv('JSON_FILE')
+SHEET_JSON_FILE = os.getenv('SHEET_JSON_FILE')
 SHEET_KEY = os.getenv('SHEET_KEY')
 
 class MySheet:
