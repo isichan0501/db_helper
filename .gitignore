@@ -3,6 +3,9 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+#add
+.env
+sheet_token.json
 # C extensions
 *.so
 
