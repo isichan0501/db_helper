@@ -50,16 +50,16 @@ import random
 from glob import glob
 import loguru
 from loguru import logger
-
-
-
-
-
-
 from dotenv import load_dotenv
 # 環境変数を参照
 load_dotenv()
-SHEET_JSON_FILE = os.getenv('SHEET_JSON_FILE')
+
+def get_absolute_path(filename):
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    absolute_path = os.path.join(current_dir, filename)
+    return absolute_path
+
+SHEET_JSON_FILE = get_absolute_path(filename=os.environ.get('SHEET_JSON_FILE'))
 SHEET_KEY = os.getenv('SHEET_KEY')
 
 class MySheet:
